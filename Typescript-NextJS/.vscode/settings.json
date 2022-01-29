@@ -1,0 +1,17 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "jest.autoRun": {
+    "watch": false,
+    "onSave": "test-file"
+  },
+  "search.exclude": {
+    "package-lock.json": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll.eslint"
+  ]
+}
