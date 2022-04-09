@@ -1,0 +1,4 @@
+user-agent: *
+allow: /
+
+sitemap: https://hr.wesolowski.dev/sitemap.xml
