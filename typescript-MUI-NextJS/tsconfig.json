@@ -31,13 +31,13 @@
     "noEmit": true,
     "isolatedModules": true,
     "incremental": true,
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "paths": {
       "@components/*": ["components/*"],
       "apollo/*": ["apollo/*"],
       "assets/*": ["assets/*"]
     }
   },
-  "exclude": [".next/**/*", "./node_modules/**/*", "next.config.js"],
+  "exclude": [".next/**/*", "node_modules/**/*", "next.config.js"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/home.jsx"]
 }
