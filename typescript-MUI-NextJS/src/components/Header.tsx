@@ -3,8 +3,8 @@ import { useContext } from 'react';
 import { Box } from '@mui/material';
 import { SLogo } from 's-block';
 
-import MinimalLogo from 'assets/svg/MinimalLogo';
-import { StyleContext } from 'context/contextType/StyleContext';
+import MinimalLogo from '@/assets/svg/MinimalLogo';
+import { StyleContext } from '@/context/contextType/StyleContext';
 
 const Header = (): JSX.Element => {
   const { space } = useContext(StyleContext);

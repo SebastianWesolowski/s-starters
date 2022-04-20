@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 import { EmotionCache } from '@emotion/cache';
-import createEmotionServer from '@emotion/server/types/create-instance';
+import createEmotionServer from '@emotion/server/create-instance';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-import config from '../../config';
+import config from '@/config/config';
+
 import createEmotionCache from '../styles/createEmotionCache';
 import theme from '../styles/theme';
 

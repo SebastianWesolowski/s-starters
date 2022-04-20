@@ -3,7 +3,7 @@ import { FC, PropsWithChildren } from 'react';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 
-import { AppContextProvider } from 'context/AppContextProvider';
+import { AppContextProvider } from '@/context/AppContextProvider';
 
 import theme from '../styles/theme';
 

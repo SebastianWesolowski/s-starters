@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from 'react';
 
-import { StyleContextWrapper } from './contextType/StyleContext';
+import { StyleContextWrapper } from '@/context/contextType/StyleContext';
 
 export const AppContextProvider: FC<PropsWithChildren<{}>> = ({ children }): JSX.Element => {
   return <StyleContextWrapper>{children}</StyleContextWrapper>;

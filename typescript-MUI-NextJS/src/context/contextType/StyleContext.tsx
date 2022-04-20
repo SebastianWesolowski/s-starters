@@ -4,7 +4,7 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import { Theme } from '@mui/material/styles';
 import { ResponsiveStyleValue } from '@mui/system';
 
-import convertToNumber from 'utils/convertToNumber';
+import convertToNumber from '@/utils/convertToNumber';
 
 export interface IStyleContext {
   space: number;

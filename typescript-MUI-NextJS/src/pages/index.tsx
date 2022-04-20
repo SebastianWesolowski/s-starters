@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { Stack, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 
-import { StyleContext } from 'context/contextType/StyleContext';
+import { StyleContext } from '@/context/contextType/StyleContext';
 
 const Homepage = (): JSX.Element => {
   const { space } = useContext(StyleContext);

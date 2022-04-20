@@ -1,15 +1,14 @@
+import '../styles/globals.css';
 import { CacheProvider } from '@emotion/react';
 import { DefaultSeo } from 'next-seo';
 import Head from 'next/head';
 
-import '../styles/globals.css';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import config from '@/config/config';
+import { AppProvider } from '@/templates/AppProvider';
+import { GlobalContainer } from '@/templates/GlobalContainer';
 
-import Footer from '@components/Footer';
-import Header from '@components/Header';
-import { AppProvider } from 'templates/AppProvider';
-import { GlobalContainer } from 'templates/GlobalContainer';
-
-import config from '../../config';
 import { AppProps } from '../../types/types';
 import createEmotionCache from '../styles/createEmotionCache';
 
