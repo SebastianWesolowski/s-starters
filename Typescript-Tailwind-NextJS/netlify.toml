@@ -1,0 +1,9 @@
+[build]
+  publish = "out"
+  command = "yarn build:prod"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
