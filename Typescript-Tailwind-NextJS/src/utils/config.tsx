@@ -18,7 +18,7 @@ export interface ISocialMedia {
 }
 
 const UI = {
-  theme: { palette: { primary: { main: '#00a6ff' } } },
+  theme: { palette: { primary: { main: '#fac846' } } },
 };
 const SEO = {
   title,
@@ -55,7 +55,7 @@ const config = {
     {
       icon: {
         normal: <Instagram />,
-        large: <Instagram fontSize="large" />,
+        large: <Instagram size="100%" />,
       },
       name: 'Instagram',
       url: 'https://www.instagram.com/wesolowski.dev/',
@@ -63,7 +63,7 @@ const config = {
     {
       icon: {
         normal: <Facebook />,
-        large: <Facebook fontSize="large" />,
+        large: <Facebook size="100%" />,
       },
       name: 'Facebook',
       url: 'https://www.facebook.com/Wesolowskidev-105113151219138/',
@@ -71,7 +71,7 @@ const config = {
     {
       icon: {
         normal: <YouTube />,
-        large: <YouTube fontSize="large" />,
+        large: <YouTube size="100%" />,
       },
       name: 'YouTube',
       url: 'https://www.youtube.com/channel/UCCQS_dsZJDN_35AL7LBiMMA',

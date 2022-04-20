@@ -26,8 +26,7 @@
     "react-cool-dimensions": "^2.0.7",
     "react-dom": "^17.0.2",
     "react-hotjar": "^5.0.0",
-    "react-icons": "^4.3.1",
-    "s-block": "^3.6.0"
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.4",
