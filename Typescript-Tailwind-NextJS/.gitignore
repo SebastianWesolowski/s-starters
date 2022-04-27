@@ -12,6 +12,9 @@
 /.next
 /out
 
+#public
+/public/assets
+
 # production
 /build
 
@@ -33,3 +36,11 @@ local
 
 # vercel
 .vercel
+
+# next-sitemap
+robots.txt
+sitemap.xml
+public/sitemap-*.xml
+
+# reports
+/reports 

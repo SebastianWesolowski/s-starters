@@ -1,64 +1,67 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
+function withOpacityValue(variable) {
+  return ({ opacityValue }) => {
+    if (opacityValue === undefined) {
+      return `rgb(var(${variable}))`;
+    }
+    return `rgb(var(${variable}) / ${opacityValue})`;
+  };
+}
+
+/** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
-    },
     extend: {
+      fontFamily: {
+        primary: ["Inter", ...fontFamily.sans],
+      },
       colors: {
-        gray: {
-          100: '#f7fafc',
-          200: '#edf2f7',
-          300: '#e2e8f0',
-          400: '#cbd5e0',
-          500: '#a0aec0',
-          600: '#718096',
-          700: '#4a5568',
-          800: '#2d3748',
-          900: '#1a202c',
+        primary: {
+          // Customize it on globals.css :root
+          50: withOpacityValue("--tw-color-primary-50"),
+          100: withOpacityValue("--tw-color-primary-100"),
+          200: withOpacityValue("--tw-color-primary-200"),
+          300: withOpacityValue("--tw-color-primary-300"),
+          400: withOpacityValue("--tw-color-primary-400"),
+          500: withOpacityValue("--tw-color-primary-500"),
+          600: withOpacityValue("--tw-color-primary-600"),
+          700: withOpacityValue("--tw-color-primary-700"),
+          800: withOpacityValue("--tw-color-primary-800"),
+          900: withOpacityValue("--tw-color-primary-900"),
         },
-        blue: {
-          100: '#ebf8ff',
-          200: '#bee3f8',
-          300: '#90cdf4',
-          400: '#63b3ed',
-          500: '#4299e1',
-          600: '#3182ce',
-          700: '#2b6cb0',
-          800: '#2c5282',
-          900: '#2a4365',
+        dark: "#222222",
+      },
+      keyframes: {
+        flicker: {
+          "0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%": {
+            opacity: 0.99,
+            // eslint-disable-next-line max-len
+            filter:
+              "drop-shadow(0 0 1px rgba(252, 211, 77)) drop-shadow(0 0 15px rgba(245, 158, 11)) drop-shadow(0 0 1px rgba(252, 211, 77))",
+          },
+          "20%, 21.999%, 63%, 63.999%, 65%, 69.999%": {
+            opacity: 0.4,
+            filter: "none",
+          },
         },
+        shimmer: {
+          "0%": {
+            backgroundPosition: "-700px 0",
+          },
+          "100%": {
+            backgroundPosition: "700px 0",
+          },
+        },
+      },
+      animation: {
+        flicker: "flicker 3s linear infinite",
+        shimmer: "shimmer 1.3s linear infinite",
       },
     },
   },
-  plugins: [
-    function ({ addComponents }) {
-      addComponents({
-        '.container': {
-          maxWidth: '100%',
-          '@screen sm': {
-            maxWidth: '544px',
-          },
-          '@screen md': {
-            maxWidth: '652px',
-          },
-          '@screen lg': {
-            maxWidth: '1088px',
-          },
-          '@screen xl': {
-            maxWidth: '1190px',
-          },
-        },
-      });
-    },
-  ],
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  plugins: [require("@tailwindcss/forms")],
 };

@@ -1,0 +1,6 @@
+{
+  "**/*.ts?(x)": ["npm run build-types"],
+  "*.{css,scss,sass}": ["npm run style:check:staged"],
+  "*.{js,jsx,ts,tsx,json}": ["npm run format:check:staged"],
+  "*.{js,jsx,ts,tsx}": ["npm run lint:check:staged"]
+}
