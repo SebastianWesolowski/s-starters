@@ -72,20 +72,8 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang={config.SEO.locale}>
-        <Head>
-          <link rel='preconnect' href='https://fonts.gstatic.com' />
-          <link
-            href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap'
-            rel='stylesheet'
-          />
-          <link
-            rel='preload'
-            href='/assets/fonts/inter-var-latin.woff2'
-            as='font'
-            type='font/woff2'
-            crossOrigin='anonymous'
-          />
-        </Head>
+        <Head />
+
         <body>
           <Main />
           <DeferNextScript />

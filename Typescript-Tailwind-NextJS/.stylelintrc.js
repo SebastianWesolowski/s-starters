@@ -9,6 +9,7 @@ module.exports = {
   ],
   plugins: ["stylelint-scss", "stylelint-no-unresolved-module", "stylelint-no-unsupported-browser-features"],
   rules: {
+    "selector-class-pattern": "^[a-zA-Z0-9-_]+$",
     "plugin/no-unresolved-module": null,
     "at-rule-no-unknown": [
       true,

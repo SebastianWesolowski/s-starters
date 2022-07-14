@@ -6,7 +6,7 @@
     "lint:parallel": "run-p lint:check style:check:strict",
     "lint:check": "eslint \"./src/**/*.+(js|jsx|ts|tsx)\" --cache",
     "lint:check:strict": "cross-env NODE_ENV=strictRules npm run lint:check -- --report-unused-disable-directives",
-    "lint:check:staged": "eslint -ext .js,.jsx,.ts,.tsx --cache",
+    "lint:check:staged": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
     "lint:fix": "run-s format \"lint:check -- --fix\" style:fix",
     "lint:fix:strict": "cross-env NODE_ENV=strictRules npm run lint:fix -- --report-unused-disable-directives",
     "style:check": "stylelint \"./src/**/*.+(css|scss|sass)\" --cache",
@@ -58,12 +58,13 @@
     "react-dom": "^17.0.2",
     "react-hotjar": "^5.0.0",
     "react-icons": "^4.3.1",
-    "tailwind-merge": "^1.2.1"
+    "tailwind-merge": "^1.2.1",
+    "@fontsource/inter": "^4.5.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@netlify/plugin-nextjs": "^4.4.2",
+    "@netlify/plugin-nextjs": "latest",
     "@next/bundle-analyzer": "^12.1.5",
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/forms": "^0.5.0",

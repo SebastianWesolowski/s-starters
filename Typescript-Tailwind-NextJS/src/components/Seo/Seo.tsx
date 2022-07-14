@@ -68,6 +68,7 @@ export const Seo = ({ ...props }: SeoProps): JSX.Element => {
         <meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover' />
         <meta name='keywords' content={meta.keywords} />
         <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
+        <meta name='title' content={meta.title} />
         <meta name='twitter:alt' content={meta.title} />
         {meta.date && (
           <>

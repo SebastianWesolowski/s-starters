@@ -15,6 +15,7 @@
     "formulahendry.auto-close-tag",
     "austenc.tailwind-docs",
     "Orta.vscode-jest",
-    "formulahendry.auto-rename-tag"
+    "formulahendry.auto-rename-tag",
+    "humao.rest-client"
   ]
 }

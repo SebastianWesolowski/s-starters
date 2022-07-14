@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/<%= component_name %>.spec.tsx
+to: "<%= category !== 'pages' ? `${absPath}/${component_name}.spec.tsx` : null %>"
 ---
 import renderer from "react-test-renderer";
 import "@testing-library/jest-dom";

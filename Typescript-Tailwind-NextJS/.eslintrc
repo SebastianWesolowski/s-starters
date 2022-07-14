@@ -30,6 +30,10 @@
     "JSX": true
   },
   "rules": {
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "consistent-return": "off",
     "global-require": "off",
     "prettier/prettier": "warn",
     //#region  //*=========== Unused Import ===========
@@ -132,14 +136,18 @@
             "endOfLine": "auto"
           }
         ],
+
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
         "jsx-a11y/anchor-is-valid": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
         "react/require-default-props": "off", // Allow non-defined react props as undefined
         "react/jsx-props-no-spreading": "off", // _app.tsx uses spread operator and also, react-hook-form
         "react-hooks/exhaustive-deps": "off", // Incorrectly report needed dependency with Next.js router
         "@next/next/no-img-element": "off", // We currently not using next/image because it isn't supported with SSG mode
         "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
         "import/prefer-default-export": "off", // Named export is easier to refactor automatically
+        "consistent-return": "off",
         "tailwindcss/classnames-order": [
           "warn",
           {
