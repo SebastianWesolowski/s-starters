@@ -1,4 +1,15 @@
-cypress
+# Konwns issue: cypress
+
+.git can't be found (see https://git.io/Jc3F9)
+that poblem relatet with curent stucture git folder is paret not curtrent path.
+
+
+```just create temporary git init folder
+$ git init
+```
+
+
+--
 \_\_templates - <https://github.com/magicspon/nextjs-craftcms-mono/tree/main/_templates>
 
 wesolowski workspace

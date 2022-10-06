@@ -9,9 +9,16 @@ import { FC, PropsWithChildren } from "react";
 
 import { I<%= component_name %>Props } from "./types";
 
+<% if(props){ -%>
 export const <%= component_name %>: FC<PropsWithChildren<I<%= component_name %>Props>> = ({ dummy, children }): JSX.Element => (
+<% } -%>
+<% if(!props){ -%>
+export const <%= component_name %>: FC<PropsWithChildren<I<%= component_name %>Props>> = ({ children }): JSX.Element => (
+<% } -%>
   <div<%= style ? ` className={styles.container} ` : '' %>>
+    <% if(props){ -%>
     <h1>{dummy}</h1>
+    <% } -%>
     <div>{children}</div>
   </div>
 );

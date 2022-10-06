@@ -19,6 +19,7 @@ module.exports = {
         primary: ["Inter", ...fontFamily.sans],
       },
       colors: {
+        // https://www.tailwindshades.com/ - utils to crate shades
         primary: {
           // Customize it on globals.css :root
           50: withOpacityValue("--tw-color-primary-50"),
@@ -31,6 +32,19 @@ module.exports = {
           700: withOpacityValue("--tw-color-primary-700"),
           800: withOpacityValue("--tw-color-primary-800"),
           900: withOpacityValue("--tw-color-primary-900"),
+        },
+        yellow: {
+          DEFAULT: "#FAC846",
+          50: "#FFFDF9",
+          100: "#FEF7E5",
+          200: "#FDEBBD",
+          300: "#FCE095",
+          400: "#FBD46E",
+          500: "#FAC846",
+          600: "#F9B80F",
+          700: "#CA9405",
+          800: "#946C04",
+          900: "#5D4403",
         },
         dark: "#222222",
       },

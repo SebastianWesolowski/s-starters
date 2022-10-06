@@ -71,12 +71,16 @@ export default class MyDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html lang={config.SEO.locale}>
+      <Html
+        className="h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']"
+        lang={config.SEO.locale}
+      >
         <Head />
 
-        <body>
+        <body className='flex h-full flex-col'>
           <Main />
           <DeferNextScript />
+          {/* <NextScript /> */}
         </body>
       </Html>
     );
