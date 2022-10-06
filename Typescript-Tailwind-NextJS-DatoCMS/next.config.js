@@ -1,3 +1,4 @@
+require("dotenv").config();
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
@@ -52,6 +53,10 @@ const securityHeaders = [
 ];
 
 module.exports = withBundleAnalyzer({
+  env: {
+      NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN:
+        process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+  },
   reactStrictMode: true,
   pageExtensions: ["mdx", "md", "tsx", "jsx"],
   eslint: {

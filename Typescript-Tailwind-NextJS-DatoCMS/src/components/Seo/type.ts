@@ -1,6 +1,7 @@
 export type Favicons = {
   rel?: string;
   href?: string;
+  staticImageData?: StaticImageData;
   sizes?: string;
   type?: string;
   color?: string;

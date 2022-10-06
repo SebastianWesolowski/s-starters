@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import clsxm from "@/lib/clsxm";
 import { FC, PropsWithChildren } from "react";
 
 import { IButtonProps } from "../types";
@@ -10,5 +10,5 @@ export const Button: FC<PropsWithChildren<IButtonProps>> = ({
   className = "",
   children,
 }): JSX.Element => (
-  <button className={clsx(baseStyles[variant], variantStyles[variant][color], className)}>{children}</button>
+  <button className={clsxm(baseStyles[variant], variantStyles[variant][color], className)}>{children}</button>
 );

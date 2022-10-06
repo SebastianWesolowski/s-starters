@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import clsxm from "@/lib/clsxm";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 
@@ -13,6 +13,6 @@ export const ButtonLink: FC<PropsWithChildren<IButtonLinkProps>> = ({
   children,
 }): JSX.Element => (
   <Link href={href}>
-    <a className={clsx(baseStyles[variant], variantStyles[variant][color], className)}>{children}</a>
+    <a className={clsxm(baseStyles[variant], variantStyles[variant][color], className)}>{children}</a>
   </Link>
 );

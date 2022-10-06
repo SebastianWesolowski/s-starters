@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* stylelint-disable-next-line selector-id-pattern */
 #__next {
   min-height: 100%;
 }

@@ -1,6 +1,7 @@
 /* eslint-disable tailwindcss/classnames-order */
 import { Popover, Transition } from "@headlessui/react";
-import clsx from "clsx";
+import clsxm from "@/lib/clsxm";
+
 import Link from "next/link";
 import { FC, Fragment } from "react";
 
@@ -19,13 +20,13 @@ export const MobileNavigation: FC = (): JSX.Element => (
           >
             <path
               d='M0 1H14M0 7H14M0 13H14'
-              className={clsx("origin-center transition", {
+              className={clsxm("origin-center transition", {
                 "scale-90 opacity-0": open,
               })}
             />
             <path
               d='M2 2L12 12M12 2L2 12'
-              className={clsx("origin-center transition", {
+              className={clsxm("origin-center transition", {
                 "scale-90 opacity-0": !open,
               })}
             />

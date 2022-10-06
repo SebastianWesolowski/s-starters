@@ -5,22 +5,9 @@ import { NextSeo } from "next-seo";
 import config from "@/config/config";
 
 import { favicons } from "./favicons";
+import getMetaData from "./getMetaData";
 
-// !STARTERCONF Change these default meta
-const defaultMeta = {
-  title: config.SEO.title,
-  siteName: config.SEO.siteName,
-  description: config.SEO.description,
-  url: config.url.production,
-  type: config.SEO.type,
-  robots: config.SEO.robots,
-  image: config.SEO.image,
-  locale: config.SEO.locale,
-  canonical: config.url.production,
-  keywords: config.SEO.keywords,
-  additionalLinkTags: config.SEO.additionalLinkTags,
-  twitter: config.SEO.twitter,
-};
+const defaultMeta = getMetaData(config.SEO);
 
 type SeoProps = {
   date?: string;
@@ -86,7 +73,7 @@ export const Seo = ({ ...props }: SeoProps): JSX.Element => {
                 key={linkProps.key}
                 rel={linkProps.rel}
                 sizes={linkProps.sizes}
-                href={linkProps.href}
+                href={linkProps.staticImageData ? linkProps.staticImageData.src : linkProps.href}
                 type={linkProps.type}
                 color={linkProps.color}
               />
