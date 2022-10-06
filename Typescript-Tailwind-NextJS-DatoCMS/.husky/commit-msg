@@ -1,0 +1,15 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit "$1"
+
+
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo \[🐶 Husky] Running commit-msg hook...\
+
+yarn husky:commit-msg
+# npx lint-staged
+
+echo \[🐶 Husky] Done ✅ commit-msg hook...\

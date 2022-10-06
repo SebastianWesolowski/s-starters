@@ -1,0 +1,5 @@
+{
+  "ignoreUnimported": ["src/assets/svg/Logo.tsx", "src/lib/clsxm.ts"],
+  "ignoreUnresolved": [],
+  "ignoreUnused": ["clsx", "copyfiles", "next", "react", "react-dom", "tailwind-merge"]
+}

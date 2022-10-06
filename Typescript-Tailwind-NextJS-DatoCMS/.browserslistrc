@@ -1,0 +1,7 @@
+defaults
+last 2 versions
+not Baidu 7
+not dead 
+not IE 11
+not OperaMini all
+not and_qq 10

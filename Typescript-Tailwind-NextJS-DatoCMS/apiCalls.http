@@ -1,0 +1,33 @@
+# POST http://localhost:3001/api/minisymposium HTTP/1.1
+# content-type: application/json
+
+# {
+#   "gender": "Man",
+#   "title": "Professor",
+#   "firstName": "Kamil",
+#   "lastName": "Nowak",
+#   "email": "denoder@gmail.com",
+#   "affiliation": "Polsko-Japońska Akademia Technik Komputerowych",
+#   "topic": "Minisymposium application form",
+#   "description":
+#     "The 25th International Conference on Computer Methods in Mechanics (CMM) continues the 49-years old series of conferences dedicated to the numerical methods and their applications in mechanics-based problems. The scientific meetings, organized biannually since 1973, provide a forum for the presentation and discussion of new ideas surrounding the theoretical background and practical applications of Computational Mechanics.",
+#   "keyword_1": "application",
+#   "keyword_2": "minisymposium",
+#   "keyword_3": "form",
+#   "keyword_4": "",
+#   "privacyPolicy": true
+# }
+
+# ###
+
+# POST http://localhost:3001/api/user/register HTTP/1.1
+# content-type: application/json
+
+# {
+#   "firstName": "Kamil",
+#   "lastName": "Nowak",
+#   "email": "denoder@gmail.com",
+#   "password": "123123"
+# } 
+
+# ###

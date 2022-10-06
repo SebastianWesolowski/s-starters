@@ -1,0 +1,27 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "jest.autoRun": {
+    "watch": false,
+    "onSave": "test-file"
+  },
+  "search.exclude": {
+    "package-lock.json": true
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll.eslint", "source.fixAll"],
+  // Multiple language settings for json and jsonc files
+  "[json][jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#000032"
+  }
+}
