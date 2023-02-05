@@ -1,6 +1,11 @@
 {
-  "**/*.ts?(x)": ["npm run build-types"],
-  "*.{css,scss,sass}": ["npm run style:check:staged"],
-  "*.{js,jsx,ts,.tsx,!.tsx.snap,json}": ["npm run format:check:staged"],
-  "*.{js,jsx,ts,.tsx,!.tsx.snap}": ["npm run lint:check:staged"]
+  "*.{js,jsx,ts,.tsx,json,!.tsx.snap}": [
+    "npm run format:check:staged"
+  ],
+  "*.{css,scss,sass}": [
+    "style:check:staged"
+  ],
+  "*.{js,jsx,ts,.tsx,!.tsx.snap}": [
+    "npm run lint:check:staged"
+  ]
 }

@@ -1,13 +1,16 @@
 /*! NOTE: These are just recommended default global styles, edit as required */
 
-::selection { /* Optional */
+::selection {
+  /* NOTE: Using this means the color and background-color are set to transparent for selected text... */
+
+  /* So you can customise your styles below */
+  color: rgb(36 36 36);
+
+  /* Optional */
+
   /* It can be really hard to read highlighted text with a text-shadow, it should be removed when selected */
   text-shadow: none;
-
-  /* NOTE: Using this means the color and background-color are set to transparent for selected text... */
-  /* So you can customise your styles below */
-  color: rgb(36, 36, 36);
-  background-color: rgb(249 184 15)
+  background-color: rgb(249 184 15);
 }
 
 html {
@@ -19,39 +22,43 @@ body {
   /* Declare your default font stack here */
 
   /* Better text rendering - font-smoothing has not been officially declared, but can still be useful */
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizespeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 img {
+  max-width: 100%;
+
   /* For responsive images that adjust & adapt */
   height: auto;
-  max-width: 100%;
 
   /* This isn't needed, but as a user, I get frustrated when I highlight text and the image gets highlighted too */
   user-select: none;
 }
 
-
-a, button {
+a,
+button {
   touch-action: manipulation; /* Element doesn't want double-tap on mobile to zoom */
 }
 
 svg {
-  /* Make the SVGs fit the parent container by default */
-  height: 100%;
   width: 100%;
 
-  /* Optional - make the SVG's fill be the same as the inherited color */
-  fill: currentColor;
-
+  /* Make the SVGs fit the parent container by default */
+  height: 100%;
+  color: blue;
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
+
+  /* Optional - make the SVG's fill be the same as the inherited color */
+  fill: currentcolor;
 }
 
-iframe, video {
+iframe,
+video {
+  width: 100%;
+
   /* Make iframes & videos fit the parent container by default */
   height: 100%;
-  width: 100%
 }
