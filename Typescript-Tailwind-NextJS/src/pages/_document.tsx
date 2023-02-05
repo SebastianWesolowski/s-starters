@@ -39,6 +39,7 @@ class DeferNextScript extends NextScript {
           key={bundle.file}
           src={`${assetPrefix}/_next/${encodeURI(bundle.file)}${devOnlyCacheBusterQueryString}`}
           nonce={this.props.nonce}
+          // @ts-ignore
           crossOrigin={this.props.crossOrigin || process.env.__NEXT_CROSS_ORIGIN}
         />
       );
@@ -57,6 +58,7 @@ class DeferNextScript extends NextScript {
         src={`${assetPrefix}/_next/${encodeURI(file)}${devOnlyCacheBusterQueryString}`}
         nonce={this.props.nonce}
         defer={!isDevelopment}
+        // @ts-ignore
         crossOrigin={this.props.crossOrigin || process.env.__NEXT_CROSS_ORIGIN}
       />
     ));

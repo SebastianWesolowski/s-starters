@@ -34,9 +34,10 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "es5"
+    "target": "es5",
+    "types": ["node", "cypress", "@percy/cypress", "@testing-library/cypress", "jest"]
   },
-  "exclude": [".next/**/*", "./out/**/*", "./node_modules/**/*", "next.config.js"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/config/configBasic.js"],
+  "exclude": [".next/**/*", "./out/**/*", "./node_modules/**/*", "next.config.js", "./cypress/**/*.ts"],
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/config/configBasic.js"],
   "moduleResolution": ["node_modules", ".next", "node"]
 }

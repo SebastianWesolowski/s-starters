@@ -13,6 +13,6 @@ export const ButtonLink: FC<PropsWithChildren<IButtonLinkProps>> = ({
   children,
 }): JSX.Element => (
   <Link href={href} className={clsx(baseStyles[variant], variantStyles[variant][color], className)}>
-   {children}
+    {children}
   </Link>
 );

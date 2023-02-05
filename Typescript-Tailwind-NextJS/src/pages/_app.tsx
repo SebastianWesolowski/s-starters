@@ -3,8 +3,8 @@ import { AppProps } from "next/app";
 import { AppProvider } from "@/layout";
 import { Analytics } from "@/utils";
 
-import "@/styles/tailwind.css";
-import "@/styles/global.css";
+import "@/styles/tailwind.scss";
+import "@/styles/global.scss";
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";

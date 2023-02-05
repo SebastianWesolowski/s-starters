@@ -81,7 +81,7 @@ module.exports = withBundleAnalyzer({
   // So, the source code is "basePath-ready".
   // You can remove `basePath` if you don't need it.
 
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config, { _dev, _isServer }) => {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
@@ -95,7 +95,6 @@ module.exports = withBundleAnalyzer({
         },
       ],
     });
-
 
     return config;
   },
