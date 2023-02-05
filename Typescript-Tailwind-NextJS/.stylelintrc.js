@@ -5,10 +5,16 @@ module.exports = {
     "stylelint-config-standard-scss",
     "stylelint-config-tailwindcss",
     "stylelint-prettier/recommended",
-    "stylelint-config-rational-order",
+    "stylelint-config-rational-order-fix"
   ],
-  plugins: ["stylelint-scss", "stylelint-no-unresolved-module", "stylelint-no-unsupported-browser-features"],
+  plugins: ["stylelint-scss", "stylelint-no-unresolved-module", "stylelint-no-unsupported-browser-features",  "stylelint-order",
+    "stylelint-config-rational-order-fix/plugin"],
   rules: {
+    "order/properties-order": [],
+    "plugin/rational-order": [true, {
+      "border-in-box-model": false,
+      "empty-line-between-groups": false,
+    }],
     "selector-class-pattern": "^[a-zA-Z0-9-_]+$",
     "plugin/no-unresolved-module": null,
     "at-rule-no-unknown": [

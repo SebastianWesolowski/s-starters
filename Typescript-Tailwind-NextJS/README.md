@@ -27,3 +27,7 @@ sprawdzić do robi i jak połączyć socket z tailwind-nextjs-starter-blog
 hygen podczas tworzenia componentu zrobic checkboxy z plikami ktore potrzeba
 
 hygen dummy props to słaby pomysł
+
+
+## Tools:
+❯ npx sort-package-json  
