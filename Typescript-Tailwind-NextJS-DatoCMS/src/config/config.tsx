@@ -9,6 +9,7 @@ const UI = {
 };
 
 const config = {
+  basic: Basic,
   theme: "system", // system, dark or light
   url: Basic.url,
   SEO,
@@ -17,7 +18,7 @@ const config = {
   socialMedia: [
     {
       icon: {
-        normal: <Instagram />,
+        normal: <Instagram color='inherit' fill='inherit' />,
         large: <Instagram size='100%' />,
       },
       name: "Instagram",

@@ -11,11 +11,7 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -28,12 +24,8 @@
     "noUnusedParameters": true,
     "outDir": "out",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "~/*": [
-        "./public/*"
-      ]
+      "@/*": ["./src/*"],
+      "~/*": ["./public/*"]
     },
     "preserveConstEnums": true,
     "removeComments": true,
@@ -44,21 +36,7 @@
     "strictNullChecks": true,
     "target": "es5"
   },
-  "exclude": [
-    ".next/**/*",
-    "./out/**/*",
-    "./node_modules/**/*",
-    "next.config.js"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/config/configBasic.js"
-  ],
-  "moduleResolution": [
-    "node_modules",
-    ".next",
-    "node"
-  ]
+  "exclude": [".next/**/*", "./out/**/*", "./node_modules/**/*", "next.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/config/configBasic.js"],
+  "moduleResolution": ["node_modules", ".next", "node"]
 }

@@ -1,5 +1,13 @@
+https://www.youtube.com/watch?v=1rZ9bRycuYA
+
 # Wesolowski.dev ![language](https://img.shields.io/badge/language-TypeScript-blue.svg)
 
+## :books: Note
+
+probably we can remov git-cz-husky
+warning git-cz-husky@0.1.1: [git-cz](https://github.com/streamich/git-cz) is [supported](https://github.com/streamich/git-cz/pull/106) husky
+
+it nessesery if comand "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/git-cz --hook || true", it was used
 ## :books: Table of Contents
 
 - [Info](#info)
