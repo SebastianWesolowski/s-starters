@@ -17,32 +17,28 @@ export const Header: FC = (): JSX.Element => (
         <ul className='flex items-center'>
           <li>
             <Link href='#'>
-              <a>
                 <span className='sr-only'>Home</span>
                 <MinimalLogo className='h-10 w-auto' />
-              </a>
             </Link>
           </li>
           <li className='ml-12 hidden md:block'>
-            <Link href='#features'>
-              <a className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>Features</a>
+            <Link href='#features' className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>
+              Features
             </Link>
           </li>
           <li className='ml-6 hidden md:block'>
-            <Link href='#testimonials'>
-              <a className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>
+            <Link href='#testimonials'className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>
                 Testimonials
-              </a>
             </Link>
           </li>
           <li className='ml-6 hidden md:block'>
-            <Link href='#pricing'>
-              <a className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>Pricing</a>
+            <Link href='#pricing'className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>
+              Pricing
             </Link>
           </li>
           <li className='ml-auto hidden md:block'>
-            <Link href='/login'>
-              <a className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>Sign in</a>
+            <Link href='/login' className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'>
+              Sign in
             </Link>
           </li>
           <li className='ml-auto md:ml-8'>

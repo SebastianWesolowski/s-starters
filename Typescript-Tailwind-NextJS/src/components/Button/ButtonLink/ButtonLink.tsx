@@ -12,7 +12,7 @@ export const ButtonLink: FC<PropsWithChildren<IButtonLinkProps>> = ({
   href,
   children,
 }): JSX.Element => (
-  <Link href={href}>
-    <a className={clsx(baseStyles[variant], variantStyles[variant][color], className)}>{children}</a>
+  <Link href={href} className={clsx(baseStyles[variant], variantStyles[variant][color], className)}>
+   {children}
   </Link>
 );
