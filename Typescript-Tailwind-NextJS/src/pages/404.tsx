@@ -2,7 +2,7 @@ import { RiAlarmWarningFill } from "react-icons/ri";
 
 import { Seo } from "@/components";
 
-import { BasicLayout } from "@/layout";
+import { BasicLayout } from "src/components/organisms/layout";
 
 export default function NotFoundPage() {
   return (

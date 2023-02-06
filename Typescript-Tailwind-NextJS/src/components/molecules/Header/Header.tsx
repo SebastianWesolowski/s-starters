@@ -3,8 +3,8 @@ import Link from "next/link";
 import { FC } from "react";
 
 // eslint-disable-next-line import/order
-import { ButtonLink } from "@/components/Button/ButtonLink/ButtonLink";
-import { Container } from "@/components/Container";
+import { ButtonLink } from "@/components/atoms/Button/ButtonLink/ButtonLink";
+import { Container } from "@/components/atoms/Container";
 
 import MinimalLogo from "@/assets/svg/MinimalLogo";
 
@@ -16,14 +16,14 @@ export const Header: FC = (): JSX.Element => (
       <nav className='relative z-50 text-sm'>
         <ul className='flex items-center'>
           <li>
-            <Link href='#'>
+            <Link href='Typescript-Tailwind-NextJS/src/components/molecules/Header#'>
               <span className='sr-only'>Home</span>
               <MinimalLogo className='h-10 w-auto' />
             </Link>
           </li>
           <li className='ml-12 hidden md:block'>
             <Link
-              href='#features'
+              href='Typescript-Tailwind-NextJS/src/components/molecules/Header#features'
               className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'
             >
               Features
@@ -31,7 +31,7 @@ export const Header: FC = (): JSX.Element => (
           </li>
           <li className='ml-6 hidden md:block'>
             <Link
-              href='#testimonials'
+              href='Typescript-Tailwind-NextJS/src/components/molecules/Header#testimonials'
               className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'
             >
               Testimonials
@@ -39,7 +39,7 @@ export const Header: FC = (): JSX.Element => (
           </li>
           <li className='ml-6 hidden md:block'>
             <Link
-              href='#pricing'
+              href='Typescript-Tailwind-NextJS/src/components/molecules/Header#pricing'
               className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'
             >
               Pricing

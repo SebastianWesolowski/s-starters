@@ -57,21 +57,21 @@ export const MobileNavigation: FC = (): JSX.Element => (
               className='absolute inset-x-0 top-full mt-4 origin-top space-y-4 rounded-2xl bg-white p-6 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5'
             >
               <li>
-                <Link href='#features'>
+                <Link href='Typescript-Tailwind-NextJS/src/components/molecules/Header/MobileNavigation#features'>
                   <a className='block w-full' onClick={() => close()}>
                     Features
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href='#testimonials'>
+                <Link href='Typescript-Tailwind-NextJS/src/components/molecules/Header/MobileNavigation#testimonials'>
                   <a className='block w-full' onClick={() => close()}>
                     Testimonials
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href='#pricing'>
+                <Link href='Typescript-Tailwind-NextJS/src/components/molecules/Header/MobileNavigation#pricing'>
                   <a className='block w-full' onClick={() => close()}>
                     Pricing
                   </a>

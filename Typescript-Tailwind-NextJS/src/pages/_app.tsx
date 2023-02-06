@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 
-import { AppProvider } from "@/layout";
+import { AppProvider } from "src/components/organisms/layout";
 import { Analytics } from "@/utils";
 
 import "@/styles/tailwind.scss";

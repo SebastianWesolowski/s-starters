@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Seo } from "@/components";
 
 import { StyleContext } from "@/context/contextType/StyleContext";
-import { BasicLayout } from "@/layout";
+import { BasicLayout } from "src/components/organisms/layout";
 
 const Homepage = (): JSX.Element => {
   const { space } = useContext(StyleContext);

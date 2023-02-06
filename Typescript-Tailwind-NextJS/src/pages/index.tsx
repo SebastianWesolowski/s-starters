@@ -1,6 +1,6 @@
 import { Seo } from "@/components";
 
-import { BasicLayout } from "@/layout";
+import { BasicLayout } from "src/components/organisms/layout";
 
 const Homepage = (): JSX.Element => {
   return (

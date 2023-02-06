@@ -38,4 +38,75 @@ hygen dummy props to słaby pomysł
 
 sprawdzić różnice pomiędzy nano a bez nano
 
+## accessibility testing library.
+https://www.npmjs.com/package/@axe-core/react
 
+## Do sprawdzenia:
+"@hookform/resolvers": "^2.9.10",
+"axios": "^1.1.3",
+"clsx": "^1.2.1",
+"hamburger-react": "^2.5.0",
+"joi": "^17.7.0",
+"json-server": "^0.17.1",
+"lodash.debounce": "^4.0.8",
+"react-hook-form": "^7.39.1",
+"react-transition-group": "^4.4.5",
+"swiper": "^8.4.4",
+},
+"devDependencies": {
+"@types/lodash.debounce": "^4.0.7",
+"@types/react-transition-group": "^4.4.5",
+"@typescript-eslint/eslint-plugin": "^5.42.0",
+
+
+## Eslint z AED:
+{
+"extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+"plugins": ["@typescript-eslint"],
+"settings": {
+"react": { "version": "detect" },
+"import/resolver": {
+"node": {
+"extensions": [".js", ".jsx", ".ts", ".tsx"],
+"moduleDirectory": ["node_modules"]
+}
+}
+},
+"ignorePatterns": ["node_modules/*", ".next/*", ".out/*"],
+"rules": {
+"@typescript-eslint/consistent-type-imports": "error",
+"import/no-unused-modules": [
+"error",
+{
+"unusedExports": true,
+"src": ["**/**/*.ts", "**/*.tsx"],
+"ignoreExports": ["**/pages/**/*.tsx", "**/__mocks__/**/*.tsx", "**/mocks/**/*.ts"]
+}
+],
+"import/order": [
+"error",
+{
+"groups": ["builtin", "external", "internal"],
+"pathGroups": [{ "pattern": "react", "group": "external", "position": "before" }],
+"pathGroupsExcludedImportTypes": ["react"],
+"alphabetize": { "order": "asc", "caseInsensitive": true }
+}
+],
+"no-console": "warn",
+"react/display-name": "off",
+"no-restricted-imports": [
+"error",
+{
+"patterns": ["../../*", ".*"]
+}
+],
+"@typescript-eslint/no-explicit-any": "error",
+"react/jsx-curly-brace-presence": [
+"error",
+{ "props": "never", "children": "never", "propElementValues": "always" }
+],
+"no-empty-pattern": "error",
+"no-empty": ["error", { "allowEmptyCatch": true }],
+"quotes": ["error", "single"]
+}
+}

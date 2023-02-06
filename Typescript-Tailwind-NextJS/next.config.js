@@ -1,6 +1,8 @@
+const path = require('path');
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = ``;
@@ -54,6 +56,11 @@ const securityHeaders = [
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ["mdx", "md", "tsx", "jsx"],
+  swcMinify: true,
+  output: 'standalone',
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'src/styles')]
+  },
   eslint: {
     dirs: ["src"],
   },
@@ -95,6 +102,7 @@ module.exports = withBundleAnalyzer({
         },
       ],
     });
+    config.plugins.push(new ESLintPlugin({ extensions: ['ts', 'tsx'] }));
 
     return config;
   },
