@@ -1,45 +1,44 @@
 /*! NOTE: These are just recommended default global styles, edit as required */
 
 
-:root {
-  /* Sizes */
-  --nav-height: 4rem;
-
-  /* Colors */
-  --text-black: #000000;
-  --text-darkgray: rgba(0, 0, 0, 0.75);
-  --text-gray: rgba(0, 0, 0, 0.5);
-  --text-lightgray: rgba(0, 0, 0, 0.3);
-  --text-light: #ffffff;
-  --text-white: #ffffff;
-  --icon-gray: #292d32bf;
-  --border-gray: rgba(0, 0, 0, 0.25);
-  --primary-blue: #0085ff;
-  --primary-green: #77b52a;
-  --backdrop-greyed: rgba(0, 0, 0, 0.25);
-  --secondary-green: #548f1e;
-  --bg-color: #ffffff;
-  --warning-color: #c91c1c;
-  --border-lightgray: rgba(0, 0, 0, 0.05);
-
-  /* Filters */
-  --bg-blur: blur(4px);
-
-  /* Transitions */
-  --transition-quick-len: 0.25s;
-
-  /* Other */
-  --round-sm: 4px;
-  --round-full: 999px;
-
-  /* Overrides */
-  --swiper-pagination-color: var(--primary-green);
-
-  /* Z-indexes */
-  --z-index-navbar: 10;
-  --z-index-modal-backdrop: 20;
-  --z-index-modal: 30;
-}
+//:root {
+//  /* Sizes */
+//  --nav-height: 4rem;
+//  /* Colors */
+//  --text-black: #000000;
+//  --text-darkgray: rgba(0, 0, 0, 0.75);
+//  --text-gray: rgba(0, 0, 0, 0.5);
+//  --text-lightgray: rgba(0, 0, 0, 0.3);
+//  --text-light: #ffffff;
+//  --text-white: #ffffff;
+//  --icon-gray: #292d32bf;
+//  --border-gray: rgba(0, 0, 0, 0.25);
+//  --primary-blue: #0085ff;
+//  --primary-green: #77b52a;
+//  --backdrop-greyed: rgba(0, 0, 0, 0.25);
+//  --secondary-green: #548f1e;
+//  --bg-color: #ffffff;
+//  --warning-color: #c91c1c;
+//  --border-lightgray: rgba(0, 0, 0, 0.05);
+//
+//  /* Filters */
+//  --bg-blur: blur(4px);
+//
+//  /* Transitions */
+//  --transition-quick-len: 0.25s;
+//
+//  /* Other */
+//  --round-sm: 4px;
+//  --round-full: 999px;
+//
+//  /* Overrides */
+//  --swiper-pagination-color: var(--primary-green);
+//
+//  /* Z-indexes */
+//  --z-index-navbar: 10;
+//  --z-index-modal-backdrop: 20;
+//  --z-index-modal: 30;
+//}
 
 
 ::selection {

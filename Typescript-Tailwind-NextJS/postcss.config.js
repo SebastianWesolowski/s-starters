@@ -39,14 +39,17 @@ module.exports = {
     //   },
     // ],
     ["postcss-focus-visible", { replaceWith: "[data-focus-visible-added]" }],
-    ["postcss-discard-comments", { removeAll: true }],
-    "cssnano",
-    // [
-    //   "cssnano",
-    //   {
-    //     preset: ["default", { discardComments: { removeAll: true } }],
-    //   },
-    // ],
+    ...(process.env.NODE_ENV === "production"
+      ? [
+          ["postcss-discard-comments", { removeAll: true }],
+          [
+            "cssnano",
+            {
+              preset: ["advanced", { discardComments: { removeAll: true } }],
+            },
+          ],
+        ]
+      : {}),
   ],
 };
 
