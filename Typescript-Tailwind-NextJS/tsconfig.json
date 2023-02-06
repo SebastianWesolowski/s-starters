@@ -25,6 +25,12 @@
     "outDir": "out",
     "paths": {
       "@/*": ["./src/*"],
+      "@atoms": ["./src/components/atoms"],
+      "@atoms/*": ["./src/components/atoms/*"],
+      "@molecules": ["./src/components/molecules"],
+      "@molecules/*": ["./src/components/molecules/*"],
+      "@organisms": ["./src/components/organisms"],
+      "@organisms/*": ["./src/components/organisms/*"],
       "~/*": ["./public/*"]
     },
     "preserveConstEnums": true,

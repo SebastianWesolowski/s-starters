@@ -1,10 +1,9 @@
 /* eslint-disable tailwindcss/classnames-order */
+// eslint-disable-next-line import/order
+import { ButtonLink } from "@atoms/Button";
+import { Container } from "@atoms/Container";
 import Link from "next/link";
 import { FC } from "react";
-
-// eslint-disable-next-line import/order
-import { ButtonLink } from "@/components/atoms/Button/ButtonLink/ButtonLink";
-import { Container } from "@/components/atoms/Container";
 
 import MinimalLogo from "@/assets/svg/MinimalLogo";
 
@@ -16,14 +15,14 @@ export const Header: FC = (): JSX.Element => (
       <nav className='relative z-50 text-sm'>
         <ul className='flex items-center'>
           <li>
-            <Link href='Typescript-Tailwind-NextJS/src/components/molecules/Header#'>
+            <Link href='#'>
               <span className='sr-only'>Home</span>
               <MinimalLogo className='h-10 w-auto' />
             </Link>
           </li>
           <li className='ml-12 hidden md:block'>
             <Link
-              href='Typescript-Tailwind-NextJS/src/components/molecules/Header#features'
+              href='#features'
               className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'
             >
               Features
@@ -31,7 +30,7 @@ export const Header: FC = (): JSX.Element => (
           </li>
           <li className='ml-6 hidden md:block'>
             <Link
-              href='Typescript-Tailwind-NextJS/src/components/molecules/Header#testimonials'
+              href='#testimonials'
               className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'
             >
               Testimonials
@@ -39,7 +38,7 @@ export const Header: FC = (): JSX.Element => (
           </li>
           <li className='ml-6 hidden md:block'>
             <Link
-              href='Typescript-Tailwind-NextJS/src/components/molecules/Header#pricing'
+              href='#pricing'
               className='rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900'
             >
               Pricing

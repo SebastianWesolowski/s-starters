@@ -39,9 +39,11 @@ hygen dummy props to słaby pomysł
 sprawdzić różnice pomiędzy nano a bez nano
 
 ## accessibility testing library.
+
 https://www.npmjs.com/package/@axe-core/react
 
 ## Do sprawdzenia:
+
 "@hookform/resolvers": "^2.9.10",
 "axios": "^1.1.3",
 "clsx": "^1.2.1",
@@ -58,8 +60,8 @@ https://www.npmjs.com/package/@axe-core/react
 "@types/react-transition-group": "^4.4.5",
 "@typescript-eslint/eslint-plugin": "^5.42.0",
 
-
 ## Eslint z AED:
+
 {
 "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
 "plugins": ["@typescript-eslint"],
@@ -110,3 +112,5 @@ https://www.npmjs.com/package/@axe-core/react
 "quotes": ["error", "single"]
 }
 }
+
+## Varianty w Tailwind - z kursu react

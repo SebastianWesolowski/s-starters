@@ -1,8 +1,6 @@
+import { Seo } from "@molecules";
+import { BasicLayout } from "@organisms";
 import { RiAlarmWarningFill } from "react-icons/ri";
-
-import { Seo } from "@/components";
-
-import { BasicLayout } from "src/components/organisms/layout";
 
 export default function NotFoundPage() {
   return (

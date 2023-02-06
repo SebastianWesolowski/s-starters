@@ -1,9 +1,8 @@
+import { Seo } from "@molecules";
+import { BasicLayout } from "@organisms";
 import { useContext } from "react";
 
-import { Seo } from "@/components";
-
 import { StyleContext } from "@/context/contextType/StyleContext";
-import { BasicLayout } from "src/components/organisms/layout";
 
 const Homepage = (): JSX.Element => {
   const { space } = useContext(StyleContext);
