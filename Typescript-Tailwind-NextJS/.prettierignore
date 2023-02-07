@@ -38,4 +38,6 @@ yarn-error.log*
 CHANGELOG.md
 
 # reports
-/reports 
+/reports
+
+/__mocks__/**/*.ts

@@ -11,6 +11,13 @@ const customJestConfig = {
     "^@/(.*)$": "<rootDir>/src/$1",
 
     "^@/public/(.*)$": "<rootDir>/public/$1",
+    "@atoms": "<rootDir>/src/components/atoms",
+    "@atoms/*": "<rootDir>/src/components/atoms/*",
+    "@molecules": "<rootDir>/src/components/molecules",
+    "@molecules/*": "<rootDir>/src/components/molecules/*",
+    "@organisms": "<rootDir>/src/components/organisms",
+    "@organisms/*": "<rootDir>/src/components/organisms/*",
+    "~/*": ["./public/*"],
   },
   setupFilesAfterEnv: ["./jest.setup.js"],
   clearMocks: true,

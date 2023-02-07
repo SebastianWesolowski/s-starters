@@ -64,11 +64,7 @@ body {
   /* Declare your default font stack here */
 
   /* Better text rendering - font-smoothing has not been officially declared, but can still be useful */
-  font-family: inherit;
-  line-height: inherit;
   text-rendering: optimizespeed;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 img {

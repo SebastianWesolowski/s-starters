@@ -1,34 +1,46 @@
 ---
-to: "<%= category === 'pages' ? `src/pages/${lo_component_name}/index.tsx` : null %>"
+to: "<%= category === 'pages' ? `${folderToSave}/index.tsx` : null %>"
 ---
-import { FC } from "react";
+import { Seo } from "@molecules";
+import { BasicLayout } from "@organisms";
+<% if(isStyle){ -%>
+import classNames from "classnames";
+<% } -%>
+<% if(isContext){ -%>
+import { useContext } from "react";
 
-import { Seo } from "@/components";
+import { StyleContext } from "@/context/contextType/StyleContext";
+<% } -%>
+<% if(isStyle){ -%>
 
-import { BasicLayout } from "@/layout";
-<% if(style){ -%>
-
-import styles from "./<%= component_name %>.module.scss";
+import u from "@/styles/utils.module.scss";
+import s from "./<%= fileNameCamelCase %>.module.scss";
 <% } -%>
 
-import { I<%= component_name %>Props } from "./types";
-<% if(props){ -%>
-const <%= component_name %>: FC<I<%= component_name %>Props> = ({ dummy }): JSX.Element => (
+const <%= fileNamePascalCase %> = (): JSX.Element => {
+<% if(isStyle){ -%>
+  const classContainer = classNames([u.basicBorder, s.background]);
 <% } -%>
-<% if(!props){ -%>
-const <%= component_name %>: FC<I<%= component_name %>Props> = (): JSX.Element => (
+<% if(isContext){ -%>
+  const { space } = useContext(StyleContext);
 <% } -%>
+  return (
   <BasicLayout>
     <Seo />
-    <main<%= style ? ` className={styles.container} ` : '' %>>
-    <% if(props){ -%>
-      <h1>Page <%= component_name %> no props</h1>
-    <% } -%>
-    <% if(!props){ -%>
-      <h1>Page <%= component_name %> {dummy}</h1>
-    <% } -%>
+    <main>
+<% if(isContext){ -%>
+      <div className='container mx-auto my-2 sm:my-4' style={{ paddingBottom: `${space}px` }}>
+        <span className='block sm:inline'>That page using context `${space}px`</span>
+      </div>
+<% } -%>
+<% if(isStyle){ -%>
+      <div className={classContainer}>
+        <p className='mt-3 text-xl'>Custom css on page</p>
+      </div>
+<% } -%>
     </main>
   </BasicLayout>
-);
+  );
+};
 
-export default <%= component_name %>;
+export default <%= fileNamePascalCase %>;

@@ -60,6 +60,8 @@ export const Seo = ({ ...props }: SeoProps): JSX.Element => {
     ],
   };
 
+  defaultMeta.title = meta.title;
+
   const nextSeoConfig = { ...defaultMeta, openGraph };
 
   return (
@@ -77,6 +79,7 @@ export const Seo = ({ ...props }: SeoProps): JSX.Element => {
             <meta name='author' property='article:author' content='Theodorus Clarence' />
           </>
         )}
+        <title>meta.title</title>
 
         {/* Favicons */}
         {favicons.map((linkProps) => {

@@ -1,5 +1,3 @@
-/* eslint-disable tailwindcss/classnames-order */
-// eslint-disable-next-line import/order
 import { ButtonLink } from "@atoms/Button";
 import { Container } from "@atoms/Container";
 import Link from "next/link";

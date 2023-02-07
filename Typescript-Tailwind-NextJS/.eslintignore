@@ -41,4 +41,6 @@ robots.txt
 sitemap.xml
 
 # reports
-/reports 
+/reports
+
+/__mocks__/**/*.ts
