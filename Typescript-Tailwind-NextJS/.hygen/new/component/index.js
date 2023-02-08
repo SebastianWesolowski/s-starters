@@ -1,4 +1,6 @@
-// my-generator/my-action/index.js
+// https://github.com/jondot/hygen/issues/131
+// checkboxes list
+
 module.exports = {
   prompt: ({ prompter, args }) => {
     return prompter
@@ -12,14 +14,14 @@ module.exports = {
           type: "select",
           name: "category",
           message: "Which type component?",
-          choices: ["components", "pages", "utils", "config"],
+          choices: ["component", "page", "util", "config"],
         },
       ])
       .then(({ category, fileName }) => {
         args.category = category;
         args.fileName = fileName;
 
-        if (category === "components") {
+        if (category === "component") {
           return prompter.prompt({
             type: "select",
             name: "atomType",
@@ -58,13 +60,18 @@ module.exports = {
           return prompter.prompt([
             {
               type: "confirm",
-              name: "isChildren",
-              message: "Do you want to have children ?",
+              name: "isStyle",
+              message: "Do you want to have custom style ?",
             },
             {
               type: "confirm",
               name: "isProps",
               message: "Do you want to have props ?",
+            },
+            {
+              type: "confirm",
+              name: "isChildren",
+              message: "Do you want to have children ?",
             },
             {
               type: "confirm",
@@ -75,11 +82,6 @@ module.exports = {
               type: "confirm",
               name: "isTest",
               message: "Do you want add test ?",
-            },
-            {
-              type: "confirm",
-              name: "isStyle",
-              message: "Do you want to have custom style ?",
             },
             {
               type: "confirm",
@@ -107,33 +109,36 @@ module.exports = {
         args.isContext = isContext;
       })
       .then(() => {
-        const { fileName, category, atomType, isStyle } = args;
+        const { fileName, category, atomType, isStyle, isTest, isContext } = args;
 
         // camelCase
-        args.fileNameCamelCase = fileName[0].toLower() + fileName.slice(1);
+        args.fileNameCamelCase = fileName[0].toLowerCase() + fileName.slice(1);
         // PascalCase
-        args.fileNamePascalCase = fileName[0].toLower() + fileName.slice(1);
+        args.fileNamePascalCase = fileName[0].toUpperCase() + fileName.slice(1);
+        args.path = {};
         args.path.src = `src`;
         args.path.pages = `${args.path.src}/pages`;
         args.path.components = `${args.path.src}/components`;
         args.path.utils = `${args.path.src}/utils`;
         args.path.config = `${args.path.src}/config`;
 
-        if (category === "pages" || category === "utils" || category === "config") {
-          args.folderToSave = `${args.path[category]}/${args.fileNameCamelCase}`;
+        if (category === "page" || category === "util" || category === "config") {
+          args.folderToSave = `${args.path[category + "s"]}/${args.fileNameCamelCase}`;
         }
 
-        if (category === "components" && args.atomType) {
-          args.folderToSave = `${args.path.components}/${atomType}/${args.fileNamePascalCase}`;
+        if (category === "component" && args.atomType) {
+          args.folderToSave = `${args.path.components}/${atomType}s/${args.fileNamePascalCase}`;
         }
 
         return {
           category,
           folderToSave: args.folderToSave,
           isStyle,
+          isTest,
+          isContext,
           fileNameCamelCase: args.fileNameCamelCase,
           fileNamePascalCase: args.fileNamePascalCase,
-          isContext: args.isContext,
+          path: args.path,
         };
       });
   },

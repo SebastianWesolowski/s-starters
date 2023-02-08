@@ -2,7 +2,7 @@
  * @type {import("next-sitemap").IConfig}
  * @see https://github.com/iamvishnusankar/next-sitemap#readme
  */
-const config = require("./src/config/configBasic");
+const config = require("./src/configs/configBasic");
 
 module.exports = {
   // !STARTERCONF Change the siteUrl

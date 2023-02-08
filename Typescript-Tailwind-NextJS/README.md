@@ -116,3 +116,5 @@ https://www.npmjs.com/package/@axe-core/react
 ## Varianty w Tailwind - z kursu react
 
 ### Skrypt kopiujący zmienne evn do prod
+
+## clsx do usunięcia

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { hotjar } from "react-hotjar";
 
-import config from "@/config/config";
+import config from "@/configs/config";
 
 const { hjsv, hjid } = config.analytics;
 

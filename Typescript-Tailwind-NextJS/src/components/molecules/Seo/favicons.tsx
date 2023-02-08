@@ -1,4 +1,4 @@
-import config from "@/config/config";
+import config from "@/configs/config";
 
 import { Favicons } from "./type";
 // https://realfavicongenerator.net/

@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import config from "@/config/config";
+import config from "@/configs/config";
 
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import HotJar from "./components/HotJar";
