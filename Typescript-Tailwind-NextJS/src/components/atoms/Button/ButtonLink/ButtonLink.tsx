@@ -1,9 +1,10 @@
-import clsx from "clsx";
+import classNames from "classnames";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 
+import s from "@atoms/Button/variants.module.scss";
+
 import { IButtonLinkProps } from "./types";
-import { baseStyles, variantStyles } from "../variants";
 
 export const ButtonLink: FC<PropsWithChildren<IButtonLinkProps>> = ({
   variant = "solid",
@@ -11,8 +12,18 @@ export const ButtonLink: FC<PropsWithChildren<IButtonLinkProps>> = ({
   className = "",
   href,
   children,
-}): JSX.Element => (
-  <Link href={href} className={clsx(baseStyles[variant], variantStyles[variant][color], className)}>
-    {children}
-  </Link>
-);
+}): JSX.Element => {
+  const classButton = classNames([
+    s.baseStyles,
+    s["baseStyles-text"],
+    s[`variantStyles-${variant}`],
+    s[`colorStyles-${color}`],
+    className,
+  ]);
+
+  return (
+    <Link href={href} className={classButton}>
+      {children}
+    </Link>
+  );
+};

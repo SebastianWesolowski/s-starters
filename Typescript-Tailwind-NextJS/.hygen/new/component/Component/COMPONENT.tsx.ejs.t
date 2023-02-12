@@ -1,59 +1,58 @@
 ---
 to: "<%= category === 'component' ? `${folderToSave}/${fileNamePascalCase}.tsx` : null %>"
 ---
-import { FC } from "react";
-
-export const <%= fileNamePascalCase %>: FC = (): JSX.Element => {
-  return(
-    <div>
-      <h2>Component <%= fileNamePascalCase %></h2>
-    </div>
-  )
-}
-
-export default <%= fileNamePascalCase %>;
-import { Seo } from "@molecules";
-import { BasicLayout } from "@organisms";
-<% i§f(isStyle){ -%>
+<% if(isStyle){ -%>
 import classNames from "classnames";
 <% } -%>
 <% if(isContext){ -%>
-import { useContext } from "react";
+import { FC, useContext } from "react";
 
-import { StyleContext } from "@/context/contextType/StyleContext";
-<% } -%>
-<% if(isStyle){ -%>
-
-import u from "@/styles/utils.module.scss";
-import s from "./<%= fileNameCamelCase %>.module.scss";
-<% } -%>
-
-const <%= fileNamePascalCase %> = (): JSX.Element => {
-<% if(isStyle){ -%>
-const classContainer = classNames([u.basicBorder, s.background]);
+<% } else { -%>
+import { FC } from "react";
 
 <% } -%>
 <% if(isContext){ -%>
-    const { space } = useContext(StyleContext);
+import { StyleContext } from "@/context/contextType/StyleContext";
+
+<% } -%>
+<% if(isStyle){ -%>
+import s from "./<%= fileNamePascalCase %>.module.scss";
+import u from "@/styles/utils.module.scss";
+
+<% } -%>
+<% if(isProps){ -%>
+import { I<%= fileNamePascalCase %>Props } from "./types";
+<% } -%>
+
+<% if(isProps){ -%>
+export const <%= fileNamePascalCase %>: FC<I<%= fileNamePascalCase %>Props> = ({ dummy }): JSX.Element => {
+<% } else { -%>
+export const <%= fileNamePascalCase %>: FC = (): JSX.Element => {
+<% } -%>
+<% if(isStyle){ -%>
+  const classContainer = classNames([u.basicBorder, s.background]);
+
+<% } -%>
+<% if(isContext){ -%>
+  const { space } = useContext(StyleContext);
+
 <% } -%>
   return (
-    <BasicLayout>
-      <Seo title='<%= fileNamePascalCase %>' />
-      <main>
-        <h1 className='text-2xl font-bold'><%= fileNamePascalCase %></h1>
+    <div>
+      <h2>Component <%= fileNamePascalCase %></h2>
+<% if(isProps){ -%>
+      <p className='mt-3 text-xl'>Component using props dummy ${dummy}</p>
+<% } -%>
 <% if(isContext){ -%>
-        <div className='container mx-auto my-2 sm:my-4' style={{ paddingBottom: `${space}px` }}>
-          <span className='block sm:inline'>That page using context `${space}px`</span>
-        </div>
+      <div className='container mx-auto my-2 sm:my-4' style={{ paddingBottom: `${space}px` }}>
+        <span className='block sm:inline'>That Component <%= fileNamePascalCase %> using context `${space}px`</span>
+      </div>
 <% } -%>
 <% if(isStyle){ -%>
-        <div className={classContainer}>
-          <p className='mt-3 text-xl'>Custom css on page</p>
-        </div>
+      <div className={classContainer}>
+        <p className='mt-3 text-xl'>Custom css on component</p>
+      </div>
 <% } -%>
-      </main>
-    </BasicLayout>
+    </div>
   );
 };
-
-

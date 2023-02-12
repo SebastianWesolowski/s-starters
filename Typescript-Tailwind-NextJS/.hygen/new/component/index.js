@@ -109,7 +109,7 @@ module.exports = {
         args.isContext = isContext;
       })
       .then(() => {
-        const { fileName, category, atomType, isStyle, isTest, isContext } = args;
+        const { fileName, category, atomType, isStyle, isTest, isContext, isProps } = args;
 
         // camelCase
         args.fileNameCamelCase = fileName[0].toLowerCase() + fileName.slice(1);
@@ -126,7 +126,7 @@ module.exports = {
           args.folderToSave = `${args.path[category + "s"]}/${args.fileNameCamelCase}`;
         }
 
-        if (category === "component" && args.atomType) {
+        if (category === "component" && atomType) {
           args.folderToSave = `${args.path.components}/${atomType}s/${args.fileNamePascalCase}`;
         }
 
@@ -136,9 +136,11 @@ module.exports = {
           isStyle,
           isTest,
           isContext,
+          isProps,
           fileNameCamelCase: args.fileNameCamelCase,
           fileNamePascalCase: args.fileNamePascalCase,
           path: args.path,
+          atomType,
         };
       });
   },

@@ -1,14 +1,23 @@
-import clsx from "clsx";
+import classNames from "classnames";
 import { FC, PropsWithChildren } from "react";
 
+import s from "../variants.module.scss";
+
 import { IButtonProps } from "../types";
-import { baseStyles, variantStyles } from "../variants";
 
 export const Button: FC<PropsWithChildren<IButtonProps>> = ({
   variant = "solid",
   color = "slate",
   className = "",
   children,
-}): JSX.Element => (
-  <button className={clsx(baseStyles[variant], variantStyles[variant][color], className)}>{children}</button>
-);
+}): JSX.Element => {
+  const classButton = classNames([
+    s.baseStyles,
+    s["baseStyles-text"],
+    s[`variantStyles-${variant}`],
+    s[`colorStyles-${color}`],
+    className,
+  ]);
+
+  return <button className={classButton}>{children}</button>;
+};

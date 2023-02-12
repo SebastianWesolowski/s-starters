@@ -1,0 +1,28 @@
+.baseStyles{
+  @apply group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none
+}
+
+.baseStyles-text{
+  @apply text-white
+}
+
+.variantStyles-solid{
+    @apply font-semibold focus-visible:outline-2 focus-visible:outline-offset-2
+
+    &.colorStyles-slate{@apply bg-slate-900 hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900}
+    &.colorStyles-yellow{@apply bg-yellow-600 hover:text-slate-100 hover:bg-yellow-500 active:bg-yellow-800 active:text-yellow-100 focus-visible:outline-yellow-600}
+    &.colorStyles-white{@apply bg-white text-slate-900 hover:bg-yellow-50 active:bg-yellow-200 active:text-slate-600 focus-visible:outline-white}
+}
+.variantStyles-outline{
+  @apply ring-1
+
+  &.colorStyles-slate{@apply ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-yellow-600 focus-visible:ring-slate-300}
+  &.colorStyles-yellow{@apply ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white}
+}
+
+//.variantStyles-solid.colorStyles-slate{@apply bg-slate-900 hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900}
+//.variantStyles-solid.colorStyles-yellow{@apply bg-yellow-600 hover:text-slate-100 hover:bg-yellow-500 active:bg-yellow-800 active:text-yellow-100 focus-visible:outline-yellow-600}
+//.variantStyles-solid.colorStyles-white{@apply bg-white text-slate-900 hover:bg-yellow-50 active:bg-yellow-200 active:text-slate-600 focus-visible:outline-white}
+
+//.variantStyles-outline.colorStyles-slate{@apply ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-yellow-600 focus-visible:ring-slate-300}
+//.variantStyles-outline.colorStyles-yellow{@apply ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white}
