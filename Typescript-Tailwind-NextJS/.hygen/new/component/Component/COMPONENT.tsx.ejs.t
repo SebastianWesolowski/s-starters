@@ -20,11 +20,15 @@ import s from "./<%= fileNamePascalCase %>.module.scss";
 import u from "@/styles/utils.module.scss";
 
 <% } -%>
-<% if(isProps){ -%>
+<% if(isProps || isChildren){ -%>
 import { I<%= fileNamePascalCase %>Props } from "./types";
-<% } -%>
 
-<% if(isProps){ -%>
+<% } -%>
+<% if(isProps && isChildren){ -%>
+export const <%= fileNamePascalCase %>: FC<I<%= fileNamePascalCase %>Props> = ({ dummy, children }): JSX.Element => {
+<% } else if(isChildren){ -%>
+export const <%= fileNamePascalCase %>: FC<I<%= fileNamePascalCase %>Props> = ({ children }): JSX.Element => {
+<% } else if(isProps){ -%>
 export const <%= fileNamePascalCase %>: FC<I<%= fileNamePascalCase %>Props> = ({ dummy }): JSX.Element => {
 <% } else { -%>
 export const <%= fileNamePascalCase %>: FC = (): JSX.Element => {
@@ -40,7 +44,18 @@ export const <%= fileNamePascalCase %>: FC = (): JSX.Element => {
   return (
     <div>
       <h2>Component <%= fileNamePascalCase %></h2>
-<% if(isProps){ -%>
+<% if(isProps && isChildren){ -%>
+      <div>
+        <p className='mt-3 text-xl'>Component using props dummy ${dummy}</p>
+        <p className='mt-3 text-xl'>Component using children</p>
+        <div>${children}</div>
+      </div>
+<% } else if(isChildren){ -%>
+      <div>
+        <p className='mt-3 text-xl'>Component using children</p>
+        ${children}
+      </div>
+<% } else if(isProps){ -%>
       <p className='mt-3 text-xl'>Component using props dummy ${dummy}</p>
 <% } -%>
 <% if(isContext){ -%>

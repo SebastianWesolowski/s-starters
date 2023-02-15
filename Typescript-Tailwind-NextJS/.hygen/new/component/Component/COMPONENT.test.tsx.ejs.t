@@ -9,7 +9,19 @@ describe("Component", () => {
     describe("<%= fileNamePascalCase %>", () => {
       describe("Render method", () => {
         it("should have h2 tag", () => {
-<% if(isProps){ -%>
+<% if(isProps && isChildren){ -%>
+          render(
+            <<%= fileNamePascalCase %> dummy='props dummy test'>
+              <span>children test</span>
+            </<%= fileNamePascalCase %>>
+          );
+<% } else if(isChildren){ -%>
+          render(
+            <<%= fileNamePascalCase %>>
+              <span>children test</span>
+            </<%= fileNamePascalCase %>>
+          );
+<% } else if(isProps){ -%>
           render(<<%= fileNamePascalCase %> dummy='props dummy test' />);
 <% } else { -%>
           render(<<%= fileNamePascalCase %> />);
