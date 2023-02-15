@@ -109,7 +109,7 @@ module.exports = {
         args.isContext = isContext;
       })
       .then(() => {
-        const { fileName, category, atomType, isStyle, isTest, isContext, isProps } = args;
+        const { fileName, category, atomType, isStyle, isTest, isContext, isProps, isChildren } = args;
 
         // camelCase
         args.fileNameCamelCase = fileName[0].toLowerCase() + fileName.slice(1);
@@ -136,6 +136,7 @@ module.exports = {
           isStyle,
           isTest,
           isContext,
+          isChildren,
           isProps,
           fileNameCamelCase: args.fileNameCamelCase,
           fileNamePascalCase: args.fileNamePascalCase,
