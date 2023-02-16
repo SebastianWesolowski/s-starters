@@ -14,7 +14,7 @@ module.exports = {
           type: "select",
           name: "category",
           message: "Which type component?",
-          choices: ["component", "page", "util", "config"],
+          choices: ["component", "page", "util"],
         },
       ])
       .then(({ category, fileName }) => {
@@ -34,6 +34,9 @@ module.exports = {
       .then(({ atomType }) => {
         if (atomType) {
           args.atomType = atomType;
+        }
+        if (args.category === "util") {
+          return { isAdvanced:false }
         }
         return prompter.prompt({
           type: "confirm",
